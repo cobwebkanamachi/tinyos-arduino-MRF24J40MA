@@ -254,5 +254,5 @@ implementation
   default async event void SpiPacket.sendDone (uint8_t *tx, uint8_t *xx, uint16_t l, error_t r) {}
 
 
-  async event void HplSpi.transferComplete () {}
+  //async event void HplSpi.transferComplete () {}
 }

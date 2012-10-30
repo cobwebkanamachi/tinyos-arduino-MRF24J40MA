@@ -54,5 +54,8 @@ interface HplAtm328pSpi
   async command void write (uint8_t byte);
   async command uint8_t read ();
 
-  async event void transferComplete ();
+  //async event void transferComplete ();
+
+  /* @@@Art Allow app to control the SS/CS line */
+//  async command void enableSs(bool enabled);
 }

@@ -141,10 +141,11 @@ implementation
     return SPDR;
   }
 
-  default async event void HplAtm328pSpi.transferComplete () {}
+/*  default async event void HplAtm328pSpi.transferComplete () {}
 
   AVR_ATOMIC_HANDLER(SPI_STC_vect)
   {
     signal HplAtm328pSpi.transferComplete ();
   }
+*/
 }

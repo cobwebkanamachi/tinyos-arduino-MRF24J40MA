@@ -33,12 +33,25 @@
 #ifndef PLATFORM_MESSAGE_H
 #define PLATFORM_MESSAGE_H
 
+#include "mrf24.h"
 #include <Serial.h>
 
-typedef serial_header_t message_header_t;
+typedef union message_header 
+{
+  mrf24_header_t mrf24;
+  serial_header_t serial;
+} message_header_t;
 
-typedef struct {} message_footer_t;
-typedef struct {} message_metadata_t;
+typedef union message_footer 
+{
+  mrf24_footer_t mrf24;
+} message_footer_t;
+
+typedef union message_metadata 
+{
+  mrf24_metadata_t mrf24;
+  serial_metadata_t serial;
+} message_metadata_t;
 
 #endif
 

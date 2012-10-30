@@ -30,6 +30,8 @@
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include "Atm328pSpi.h"
+
 configuration Atm328pSpiC
 {
   provides

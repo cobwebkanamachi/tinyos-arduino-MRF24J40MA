@@ -11,6 +11,7 @@ push( @includes, qw(
   %T/chips/atm328p/i2c
   %T/chips/atm328p/timer
   %T/chips/atm328p/usart
+  %T/chips/mrf24j40
   %T/lib/timer
   %T/lib/serial
   %T/lib/power

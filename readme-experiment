@@ -104,3 +104,20 @@ void loop() {
   delay(200);               // wait for a second
   Serial.println("Test¥n");
 }
+2.2 MRF24j40ma pin mapping
+This is under experiment.
+i wrote using pin mapping only now.
+MRF            Arduino     328P
+GND   1        GND         GND
+RESET 2        6           12(pd6)
+INTR  4        2           2(pd1)
+SDI   5        11          17(pb3)
+SCK   6        13          19(pb5)
+SDO   7        12          18(pb4)
+CS    8        7           13(pd7)
+VIN   10       -           from FTDI 3v3
+# if you use avrdude with avrispmkii, SPI connection conflict with avrdude and mrf.
+# so if you prefer avoid one, please disconnet jumper pin from mrf pins shown bellow.
+# pin 5(SDI), pin6(SCK), pin 10(VIN).
+# if you troubled with avrispmkii, please disconnect usb and reconnect that.
+# and you should power on ATMEGA328P if you use avrdude with avrispmkii.

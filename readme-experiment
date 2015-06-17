@@ -38,4 +38,6 @@ avr-objcopy --output-target=ihex main.exe main.ihex
 1.7 if tweak misc ids, do that like this
 tos-set-symbols main.srec build/iris/main.srec.out-foo TOS_NODE_ID=0 ActiveMessageAddressC$addr=0
 1.8 copy build/uno/main.srec /media/sf_foo/bar
+if you tweak ids on srec, you should use overwrited srec file(like main.srec.out-foo).
 1.9 use avrdude (chip erase,write firmware, etc)
+if you tweak ids on srec, you should use overwrited srec file(like main.srec.out-foo).

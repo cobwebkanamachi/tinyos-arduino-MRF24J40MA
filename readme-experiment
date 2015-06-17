@@ -31,6 +31,7 @@ FcfsResourceQueueC__0__qTail  :  ff  [.]  (255)
 McuSleepC__dirty              :  01  [.]  (1)
 SimpleArbiterP__0__resId      :  ff  [.]  (255)
 TOS_NODE_ID                   :  01 00  [..]  (1)
+you get listing like above.
 1.6 make srec, ihex from main.exe (if make do this, you can omit this)
 avr-objcopy --output-target=srec main.exe main.srec
 avr-objcopy --output-target=ihex main.exe main.ihex

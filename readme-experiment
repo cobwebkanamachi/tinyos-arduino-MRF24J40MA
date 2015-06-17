@@ -1,0 +1,27 @@
+# This is a experiment on Uno compatible breadboard machine with MRF24J40MA.
+1. Procedures i did
+1.1 get zip archive of markushx/tinyos-arduino-MRF24J40MA
+1.2 set enviromental variables
+   export TOSROOT=/home/user/Desktop/tosMRFard
+   export TOSDIR=$TOSROOT/tos
+   export MAKERULES=/home/user/Desktop/tosMRFard/support/make/Makerules
+1.3 cd apps/RadioCountToLeds
+1.4 make uno
+1.5 tos-set-symbols --read main.exe
+.data                         :    []
+AMQueueImplP__0__current      :  01  [.]  (1)
+ActiveMessageAddressC__addr   :  01 00  [..]  (1)
+ActiveMessageAddressC__group  :  22  ["]  (34)
+CSWTCH.72                     :  00 02 0e 06 0c  [.....]
+FcfsResourceQueueC__0__qHead  :  ff  [.]  (255)
+FcfsResourceQueueC__0__qTail  :  ff  [.]  (255)
+McuSleepC__dirty              :  01  [.]  (1)
+SimpleArbiterP__0__resId      :  ff  [.]  (255)
+TOS_NODE_ID                   :  01 00  [..]  (1)
+1.6 make srec, ihex from main.exe (if make do this, you can omit this)
+avr-objcopy --output-target=srec main.exe main.srec
+avr-objcopy --output-target=ihex main.exe main.ihex
+1.7 if tweak misc ids, do that like this
+tos-set-symbols main.srec build/iris/main.srec.out-foo TOS_NODE_ID=0 ActiveMessageAddressC$addr=0
+1.8 copy build/uno/main.srec /media/sf_foo/bar
+1.9 use avrdude (chip erase,write firmware, etc)

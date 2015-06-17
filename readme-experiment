@@ -3,7 +3,7 @@ environment:
  * xubuntos, virtualbox, osx, arduino ide(same i wrote on tos on msp430)
  * avrispmkii
  * breadboard x 3 (one for MRF24J40MA)
- * FTDI TTL 3.3v x 2 (or AM232RL)
+ * FTDI TTL 3.3v x 2 (or FT232RL) from AKIZUKI denshi tsusho
  * MRF24J40MA x 2
  * many jumper wires
  * ATMEGA328P (dip) x 2 or 3
